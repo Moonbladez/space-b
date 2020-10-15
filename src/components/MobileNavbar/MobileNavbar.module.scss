@@ -1,0 +1,26 @@
+@import "./../../styles/variables";
+
+.mobileNavbar {
+    text-align: right;
+    padding: 0.5rem 1rem;
+    background-color:black;
+
+    svg {
+        font-size:2rem;
+    }
+
+    nav {
+        width: 50vw;
+        margin-left: auto;
+        margin-top: 1rem;
+  
+        li {
+            margin-bottom: 1.5rem;
+
+          
+        }
+
+    }
+
+   
+}

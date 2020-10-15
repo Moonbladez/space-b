@@ -8,10 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "destyle.css": "^1.0.15",
     "next": "9.5.5",
     "node-sass": "^4.14.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-icons": "^3.11.0"
   },
   "browserslist": [
     ">0.2%",

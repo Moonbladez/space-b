@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap');
+@import "./../../node_modules/destyle.css/destyle.css";
+
+
+@import "./variables";
+
+body {
+  background-color: $black;
+  color: $white;
+  font-family: $font-body;
+}
+
+h1 {
+  font-family: $font-heading;
+  font-size: 6rem;
+}
+
+
+
