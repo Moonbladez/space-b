@@ -1,0 +1,52 @@
+@import "./../../styles/variables";
+
+.contactForm {
+    .wrapper {
+        margin-top: 3rem;
+        grid-column: span 12;
+    }
+    form {
+        padding: 1rem 2rem;
+        background-color: $white;
+        color: $black;
+        border-radius: 0.3rem;
+    }
+
+    
+
+
+    input,textarea {
+        border-bottom: 1px solid $black;
+        width: 90%;
+        margin-top: 0.5rem;
+        padding: 1rem 1rem 1rem 0.5rem;
+
+        &:focus {
+            background-color: lightgray;
+        }
+    }
+
+    button {
+        background-color: $primary;
+        width: 100%;
+        padding: 1rem 2rem;
+        text-align: center;
+
+        &:hover,
+        &:focus {
+            background-color: darken($primary, 10%);
+        }
+    }
+
+}
+
+.inputGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    svg {
+        font-size: 2rem;
+    }
+}

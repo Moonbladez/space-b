@@ -1,0 +1,19 @@
+
+@import "../../styles/variables";
+
+
+.button {
+    border: 1px solid $white;
+    padding: 1rem 2rem;
+    text-transform:uppercase;
+    margin-top: 3rem;
+    transition: $transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+        border: 1px solid $primary;
+        background-color: $primary;
+        color: $black;
+    }
+}

@@ -1,0 +1,87 @@
+@import "../../styles/variables";
+@import "../../styles/media.scss";
+
+.companyInfo {
+
+  p {
+    line-height: $p-line-height;
+
+  }
+
+}
+
+.content {
+    grid-column: span 12;
+    @include lg {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        max-width: 60vw;
+        margin: auto;
+    }
+}
+.summary {
+    margin-bottom: 2rem;
+
+
+}
+
+.description {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 4rem;
+    p {
+        line-height: 1.7rem;
+    }
+    span {
+        color: $primary;
+        margin-right: 1rem;
+    }
+}
+
+.socialWrapper {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include md {
+        align-items: center;
+        justify-content: center;
+        grid-column-gap: 2rem;
+    }
+
+    @include lg {
+        max-width: 60vw;
+        margin: auto;
+        grid-column-gap: 4rem;
+    }
+
+    h3 {
+        grid-column: span 2;
+        margin: 0;
+
+        @include md {
+            grid-column: span 1;
+        }
+    }
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    grid-column: span 2;
+
+    @include md {
+        grid-column: span 1;
+    }
+
+    svg {
+        font-size: 2rem;
+        transition: $transition;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+@import "../../styles/variables";
+@import "../../styles/media.scss";
+
+.dragonCard {
+    grid-column: span 12;
+    margin-bottom: 5rem;
+    border: 1px solid $primary;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    @include lg {
+        grid-column: span 6;
+    }
+
+    img {
+        width: 100%;
+    }
+    
+}
+
+.images {
+    display: block !important;
+    height: 25rem;
+    overflow: hidden;
+    object-fit: fill;
+}
+
+.image {
+    position: relative;
+    display: flex ;
+    flex-direction: column;
+}
+
+    .pagination {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    color:$black;
+
+}
+
+.paginationRight {
+    right: 10px;
+}
+.paginationLeft {
+    left:10px,
+}
+
+.content {
+    p {
+        line-height: $p-line-height;
+    }
+}
+
+.data {
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+
+    svg  {
+        color: $primary;
+        margin: 0 1rem;
+    }
+}
+
+.button {
+    margin-top: auto;
+    border: 1px solid $white;
+    display: block;
+    padding: 1rem 2rem;
+    text-transform: capitalize;
+
+    &:hover, 
+    &:focus {
+        background-color: $primary;
+        color: $black;
+        border:  1px solid $primary;
+        transition: $transition;
+    }
+}
+

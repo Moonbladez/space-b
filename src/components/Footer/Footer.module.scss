@@ -1,1 +1,35 @@
+@import "./../../styles/variables";
 
+
+.footer {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    border-top: 1px solid $primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        display: flex;
+
+        svg {
+            font-size: 1.3rem;
+        }
+        
+
+        a {
+            margin-right: 1rem;
+            transition: $transition;
+
+            &:hover,
+            &:focus,
+            &active {
+                color: $primary;
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: 0.8rem;
+    }
+}

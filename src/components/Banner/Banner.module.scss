@@ -1,0 +1,37 @@
+@import "./../../styles/variables";
+@import "./../../styles/media";
+
+.banner {
+    background-position: center !important;
+    background-size: cover !important;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+	// animation: pan-top 5s ease-out both;
+
+  
+
+    .container {
+        width: 90%;
+        margin: auto;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        animation: slide-top 0.8s linear both;
+    }
+
+    h1 {
+        letter-spacing: 0.3rem;
+    }
+
+    p {
+        text-transform: capitalize;
+        font-size: 2rem;
+    }
+}
+

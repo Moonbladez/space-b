@@ -1,0 +1,54 @@
+@import "./../../styles/variables";
+@import "./../../styles/media.scss";
+
+.apod {
+    margin-bottom: 5rem;
+
+    h3 {
+        @include lg {
+            margin-top: 0;
+        }
+    }
+
+
+    &__image{
+        position: relative;
+        grid-column: span 12;
+
+        @include lg {
+            grid-column: span 6;
+        }
+
+
+        span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0 0 1rem 1rem;
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+    }
+
+    .info {
+        grid-column: span 12;
+
+        @include lg {
+            grid-column: span 6;
+        }
+       
+    }
+
+
+    img {
+        width: 100%;
+
+        @include lg {
+           height: 100%;
+        }
+    }
+
+    p {
+        line-height: $p-line-height;
+    }
+}

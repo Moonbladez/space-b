@@ -3,6 +3,7 @@
 
 
 @import "./variables";
+@import "./media.scss";
 
 body {
   background-color: $black;
@@ -10,9 +11,76 @@ body {
   font-family: $font-body;
 }
 
-h1 {
+h1,h2 {
   font-family: $font-heading;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+h1 {
   font-size: 6rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+  position: relative;
+  grid-column: span 12;
+  &:after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    bottom: -1rem; 
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    max-width: 30%;
+    background: $primary;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  color: $primary;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  text-transform: capitalize;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 25%;
+    height: 1px;
+    bottom: -0.7rem;
+    left: 0;
+    border-bottom: 1px solid $white;
+  }
+
+}
+
+section {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10rem;
+  display: grid;
+  grid-template-columns: repeat(12,1fr);
+  
+
+  @include sm {
+    width: 80%;
+  }
+
+  @include lg {
+    width: 70%;
+    grid-column-gap: 1.5rem;
+  }
+
+  @include xl {
+    grid-column-gap: 3rem;
+  }
+
+
 }
 
 

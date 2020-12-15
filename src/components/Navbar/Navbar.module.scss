@@ -1,0 +1,58 @@
+@import "../../styles/variables";
+@import "../../styles/media.scss";
+
+.navbar {
+    display: none;
+
+    @include md {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 1rem;
+        align-items: center;
+
+        .logo {
+            font-size: 3rem;
+        }
+
+        ul {
+            display: flex;
+
+            li {
+                &:not(:last-of-type) {
+                    margin-right: 1rem;
+                }
+
+                a {
+                    background:
+                        linear-gradient(
+                            to right,
+                            $primary 0%,
+                            $primary 1px,
+                            transparent 2px
+
+                    );
+
+                    background-size: 100%;
+                    padding-left: 0.5rem;
+
+
+
+                &:hover,
+                &:focus,
+                &:active {
+
+                    outline: none;
+                    background:
+                    linear-gradient(
+                      to right,
+                      $primary 0%,
+                      $primary 5px,
+                      transparent
+                    );
+                }
+                }
+            }
+        }
+    }
+}
+

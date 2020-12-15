@@ -1,0 +1,41 @@
+@import "./../../styles/variables";
+@import "./../../styles/media.scss";
+
+
+.timer {
+    font-size: 3rem;
+    text-align: center;
+    font-family: $font-heading;
+    color: $primary;
+    margin-bottom: 2rem;
+    grid-column: span 12;
+
+}
+
+.info {
+    grid-column: span 12;
+    
+    @include lg {
+        grid-column: span 6;
+    }
+
+}
+
+.image {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    @include lg {
+        margin-bottom: 0;    
+}
+    
+}
+
+.details {
+    line-height: $p-line-height;
+    grid-column: span 12;
+
+    @include lg {
+        grid-column: span 6;
+    }
+}

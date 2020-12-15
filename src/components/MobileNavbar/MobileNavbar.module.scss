@@ -1,9 +1,14 @@
 @import "./../../styles/variables";
+@import "./../../styles/media.scss";
 
 .mobileNavbar {
     text-align: right;
     padding: 0.5rem 1rem;
     background-color:black;
+
+    @include md {
+        display: none;
+    }
 
     svg {
         font-size:2rem;
@@ -16,6 +21,35 @@
   
         li {
             margin-bottom: 1.5rem;
+
+            a {
+                background:
+                    linear-gradient(
+                        to left,
+                        $primary 0%,
+                        $primary 1px,
+                        transparent 2px
+
+                );
+
+                background-size: 100%;
+                padding-right: 0.5rem;
+
+
+
+            &:hover,
+            &:focus,
+            &:active {
+                outline: none;
+                background:
+                linear-gradient(
+                  to left,
+                  $primary 0%,
+                  $primary 5px,
+                  transparent
+                );
+            }
+            }
 
           
         }

@@ -1,0 +1,95 @@
+@import "./../../styles/variables";
+@import "./../../styles/media";
+
+
+
+.CrewCard{
+    border: 1px solid $primary;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    grid-column: span 12;
+
+    @include lg {
+        grid-column: span 6;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
+.wrapper, 
+.wrapperExpanded {
+    bottom: 0;
+    cursor: pointer;
+    padding: 1rem;
+    background-color: $black;
+    opacity: 0.8;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.wrapperExpanded {
+    max-height: 35%;
+    opacity: 1;
+    transition: $transition;
+
+
+    li {
+        margin-bottom: 1rem;
+
+        span {
+            margin-left: 1rem;
+        }
+    }
+
+
+}
+
+.name {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+        color: $primary;
+        font-size: 1.3rem;
+    }
+}
+
+
+
+.outer {
+    position: relative;
+}
+
+.description {
+    position: relative;
+    border-spacing: 5px ;
+    border-collapse: separate;
+    width: 100%;
+
+    svg {
+        position: absolute;
+        right: 0;
+        color: $primary;
+        font-size: 1.3rem;
+    }
+
+    a {
+        transition: $transition;
+        &:hover,
+        &:focus {
+            color: $primary;
+        }
+    }
+
+
+}

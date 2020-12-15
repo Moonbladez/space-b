@@ -1,0 +1,22 @@
+@import "../../styles/media.scss";
+
+.rockets {
+    fieldset {
+        grid-column: span 12;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: space-around;
+        input {
+            margin-left: 1rem;
+        }
+
+}
+
+.wrapper {
+    grid-column: span 12;
+
+    @include lg {
+        grid-column: span 6;
+    }
+}
+}
