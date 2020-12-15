@@ -32,21 +32,21 @@ export async function getStaticProps() {
 }
 
 export default function Home(props) {
-	console.log(process.env.NASA_CODE)
 	return (
 		<div className={styles.container}>
 			<Head>
 				<title>Space B | Home</title>
+				<meta name="description" content="Space B site provides information and news about the latest space technologies. Including, satellities, and images." />
 				<link rel='icon' href='/favicon.ico' />
 				<meta property="og:title" content="Space B" key="ogtitle" />
 			    <meta property="og:description" content="Space B site provides information and news about the latest space technologies. Including, satellities, and images." key="ogdesc" />
-
+				<html lang="en"/>
 				{/* Twitter */}
 				<meta name="twitter:card" content="summary" key="twcard" />
 				<meta name="twitter:creator" content="@jegheterbekki" key="twhandle" />
 
 				{/* OG */}
-				{/* <meta property="og:url" content={currentURL} key="ogurl" /> */}
+				<meta property="og:url" content="https://space-b.vercel.app/" key="ogurl" />
 				<meta property="og:image" content="https://i.imgur.com/FhFhPvj.jpg" key="ogimage" />
 				<meta property="og:site_name" content="Space B" key="ogsitename" />
 				<meta property="og:title" content="Space B" key="ogtitle" />

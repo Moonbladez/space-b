@@ -16,7 +16,6 @@ const formateDate = (date) => {
 export default function TimelineItem({timelineData}) {
 	const link = timelineData.links.article
 	//  const dateFormat = formateDate(date);
-	 console.log(link)
 	return (
 		<article className={styles.TimelineItem}>
 			<div className={styles.content}>

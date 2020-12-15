@@ -84,7 +84,7 @@ export default function Roadster(props) {
 				</div>
 			</div>
 			<div className={styles.buttonWrapper}>
-				<Button text='read more' href={props.data.wikipedia} />
+				<Button text='more about Roadster' href={props.data.wikipedia} />
 				<Button text='see video' href={props.data.video} />
 			</div>
 		</section>

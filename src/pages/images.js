@@ -6,8 +6,6 @@ import Banner from "../components/Banner/Banner";
 import APOD from "../components/APOD/APOD";
 import RoverImage from "../components/RoverImage/RoverImage";
 
-//styling
-import styles from "../styles/pages/Home.module.scss";
 
 export async function getStaticProps() {
 	const apod = await fetch(
