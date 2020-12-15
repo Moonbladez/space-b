@@ -44,7 +44,7 @@ export default function People({ peopleData, crewData }) {
 				<meta property="og:title" content="Space B" key="ogtitle" />
 				<meta property="og:description" content="Discoer the latest technology currently in space, and also technology that was used in past space events" key="ogdesc" />
 			</Head>
-			<Banner title='people in space' imageUrl='images/people-banner.jpg' />
+			<Banner title='people in space' imageUrl='images/people-banner.webp' />
 			<main className={styles.main}>
 				<PeopleInSpace data={peopleData} />
 				<Crew data={crewData} />

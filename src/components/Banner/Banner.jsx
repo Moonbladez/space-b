@@ -7,7 +7,7 @@ function Banner(props) {
 			className={styles.banner}
 			role='banner'
 			style={{
-				backgroundImage: "url(" + props.imageUrl + ")",
+				backgroundImage: "url(" + props.imageUrl+ ")",
 				background: `linear-gradient(to bottom, rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.9)100%), url(${props.imageUrl})  `,
 			}}
 		>

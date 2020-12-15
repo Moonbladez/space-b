@@ -25,7 +25,7 @@ export default function Images(props) {
 			</Head>
 			<Banner
 				title='The History of Space X'
-				imageUrl='images/images-banner.jpg'
+				imageUrl='images/images-banner.webp'
 			/>
 			<main>
 				<section>

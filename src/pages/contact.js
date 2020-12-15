@@ -29,7 +29,7 @@ export default function Contact({ companyInfoData }) {
 				<title>Space B | Contact</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Banner title='Contact Us' imageUrl='images/contact-banner.jpg' />
+			<Banner title='Contact Us' imageUrl='images/contact-banner.webp' />
 			<main className={styles.main}>
 				<ContactForm />
 				<CompanyInfo data={companyInfoData} />

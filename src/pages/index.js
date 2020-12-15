@@ -56,7 +56,7 @@ export default function Home(props) {
 			<Banner
 				title='Space-B'
 				subtitle='discovering the beyond'
-				imageUrl='images/home-banner.jpg'
+				imageUrl='images/home-banner.webp'
 			/>
 
 			<main className={styles.main}>

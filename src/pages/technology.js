@@ -51,7 +51,7 @@ export default function Ships(props) {
 
 			<Banner
 				title='Technology in Space'
-				imageUrl='images/technology-banner.jpg'
+				imageUrl='images/technology-banner.webp'
 			/>
 
 			<main className={styles.main}>
