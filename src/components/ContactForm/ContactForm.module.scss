@@ -12,7 +12,25 @@
         border-radius: 0.3rem;
     }
 
-    
+    .submitted {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        line-height: 2.5rem;
+
+        .submittedIcon {
+            color: $valid;
+            margin-bottom: 1rem;
+            font-size: 5rem;
+            margin: auto;
+        }
+        
+        .submittedEmail {
+            font-weight: bold;
+            color: $primary;
+            font-size: 2.1rem;
+        }
+    }
 
 
     input,textarea {
@@ -38,7 +56,16 @@
         }
     }
 
+    .errorMessage {
+        color: red;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+
 }
+
+
 
 .inputGroup {
     display: flex;
@@ -46,7 +73,13 @@
     justify-content: center;
     margin-bottom: 2rem;
 
+    .errorMessage {
+        color: red;
+        margin-bottom: 1rem;
+    }
+
     svg {
         font-size: 2rem;
+        color: red;
     }
 }
