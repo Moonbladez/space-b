@@ -33,20 +33,21 @@ export default function Ships(props) {
 		<div className={styles.container}>
 			<Head>
 				<title>Space B | Technology</title>
+				<html lang="en"/>
 				<link rel='icon' href='/favicon.ico' />
 				<meta property="og:title" content="Space B" key="ogtitle" />
-			    <meta property="og:description" content="Discoer the latest technology currently in space, and also technology that was used in past space" key="ogdesc" />
+			    <meta property="og:description" content="Discover the latest technology currently in space, and also technology that was used in past space" key="ogdesc" />
 
 				{/* Twitter */}
 				<meta name="twitter:card" content="summary" key="twcard" />
 				<meta name="twitter:creator" content="@jegheterbekki" key="twhandle" />
 
 				{/* OG */}
-				{/* <meta property="og:url" content={currentURL} key="ogurl" /> */}
+				<meta property="og:url" content="https://space-b.vercel.app/technology" key="ogurl" /> 
 				<meta property="og:image" content="https://i.imgur.com/9KTI4Ky.jpg" key="ogimage" />
 				<meta property="og:site_name" content="Space B" key="ogsitename" />
 				<meta property="og:title" content="Space B" key="ogtitle" />
-				<meta property="og:description" content="Discoer the latest technology currently in space, and also technology that was used in past space" key="ogdesc" />
+				<meta property="og:description" content="Discover the latest technology currently in space, and also technology that was used in past space" key="ogdesc" />
 			</Head>
 
 			<Banner

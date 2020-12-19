@@ -20,7 +20,7 @@ export default function Rockets({ data }) {
 			<h2>Rockets</h2>
 			<fieldset>
 				<div>
-					<label htmlFor='status-all'>All</label>
+					<label htmlFor='status-all'>All
 					<input
 						onChange={({ currentTarget }) => setSelected(currentTarget.value)}
 						type='radio'
@@ -29,9 +29,10 @@ export default function Rockets({ data }) {
 						value='all'
 						checked={selected === "all"}
 					/>
+					</label>
 				</div>
 				<div>
-					<label htmlFor='status-active'>Active</label>
+					<label htmlFor='status-active'>Active
 					<input
 						onChange={({ currentTarget }) => setSelected(currentTarget.value)}
 						type='radio'
@@ -40,9 +41,10 @@ export default function Rockets({ data }) {
 						value='active'
 						checked={selected === "active"}
 					/>
+					</label>
 				</div>
 				<div>
-					<label htmlFor='status-all'>Inactive</label>
+					<label htmlFor='status-all'>Inactive
 					<input
 						onChange={({ currentTarget }) => setSelected(currentTarget.value)}
 						type='radio'
@@ -51,6 +53,7 @@ export default function Rockets({ data }) {
 						value='inactive'
 						checked={selected === "inactive"}
 					/>
+					</label>
 				</div>
 			</fieldset>
 

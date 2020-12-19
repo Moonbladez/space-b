@@ -18,6 +18,8 @@ export async function getStaticProps() {
 	);
 	const roverData = await rover.json();
 
+	console.log(roverData)
+
 	return {
 		props: {
 			apodData,
@@ -25,6 +27,8 @@ export async function getStaticProps() {
 		},
 	};
 }
+
+
 
 export default function Images(props) {
 	return (

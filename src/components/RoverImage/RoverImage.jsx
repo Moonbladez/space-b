@@ -9,9 +9,20 @@ import {Pagination} from "../Pagination/Pagination";
 import styles from "./RoverImage.module.scss";
 
 export default function RoverImage({ roverData, photos, range }) {
-	console.log({roverData})
 
-	const rover = roverData.photos[0].rover;
+	const sortImages = (roverData) => {
+			return roverData.map((data)=> {
+				return {
+					id: data.id,
+					name: data.camera.full_name,
+					src: data.img_src
+				}
+		})
+	}
+
+	console.log(sortImages(data.id))
+
+	// const rover = roverData.photos[0].rover;
 	// const [page, setPage] = useState(0)
 	// const numberOfPages = Math.floor(photos.length / range)
 
@@ -24,7 +35,7 @@ export default function RoverImage({ roverData, photos, range }) {
 	return (
 
 		<section className={styles.roverImage}>
-			<h2>Images from Rover</h2>
+			{/* <h2>Images from Rover</h2>
 			<h3>{`About ${rover.name}`}</h3>
 
 			<div className={styles.about}>
@@ -52,7 +63,7 @@ export default function RoverImage({ roverData, photos, range }) {
 					</>
 				);
 			})}
-			{/* <Pagination page={page} numberOfPages={numberOfPages} handlePageSet={setPage}/> */}
+			<Pagination page={page} numberOfPages={numberOfPages} handlePageSet={setPage}/> */}
 		</section>
 	);
 }
