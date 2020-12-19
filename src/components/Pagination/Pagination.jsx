@@ -9,9 +9,6 @@ export const Pagination = ({ page, numberOfPages, handlePageSet }) => {
     (interger) => interger
   );
   const selectedPage = page;
-
-  console.log("number", numberOfPages);
-  console.log("page", page);
   const previousPage = () => handlePageSet(page >= 1 ? page - 1 : page);
   const currentPage = (page) => handlePageSet(page);
   const nextPage = () =>

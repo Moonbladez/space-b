@@ -42,7 +42,37 @@ export default function Images({ apodData, roverData }) {
     <div>
       <Head>
         <title>Space B | Images</title>
+        <html lang="en" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Space B" key="ogtitle" />
+        <meta
+          property="og:description"
+          content="Current images taken in space from Mars Rover"
+          key="ogdesc"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta name="twitter:creator" content="@jegheterbekki" key="twhandle" />
+
+        {/* OG */}
+        <meta
+          property="og:url"
+          content="https://space-b.vercel.app/images"
+          key="ogurl"
+        />
+        <meta
+          property="og:image"
+          content="https://i.imgur.com/FhFhPvj.jpg"
+          key="ogimage"
+        />
+        <meta property="og:site_name" content="Space B" key="ogsitename" />
+        <meta property="og:title" content="Space B | Images" key="ogtitle" />
+        <meta
+          property="og:description"
+          content="Current images taken in space from Mars Rover"
+          key="ogdesc"
+        />
       </Head>
       <Banner title="Images from Space" imageUrl="images/images-banner.jpg" />
       <main>
