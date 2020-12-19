@@ -75,7 +75,7 @@ export default function Images({ apodData, roverData }) {
           key="ogdesc"
         />
       </Head>
-      <Banner title="Images from Space" imageUrl="images/images-banner.jpg" />
+      <Banner title="Images from Space" imageUrl="images/images-banner.webp" />
       <main>
         <APOD data={apodData} />
         <RoverImage photos={simplifyImages(roverData)} range={5} />

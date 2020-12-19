@@ -16,11 +16,7 @@ export const Pagination = ({ page, numberOfPages, handlePageSet }) => {
 
   return (
     <nav className={styles.pagination}>
-      {page !== 0 && (
-        <button onClick={previousPage} type="button">
-          <AiOutlineArrowLeft aria-aria-controls="pagination left" />
-        </button>
-      )}
+      {page !== 0 && <AiOutlineArrowLeft onClick={previousPage} />}
 
       {pagesAsArray.map((page) => (
         <button
@@ -33,11 +29,7 @@ export const Pagination = ({ page, numberOfPages, handlePageSet }) => {
           {page + 1}
         </button>
       ))}
-      {page < numberOfPages - 1 && (
-        <button onClick={nextPage} type="button">
-          <AiOutlineArrowRight aria-aria-controls="pagination right" />
-        </button>
-      )}
+      {page < numberOfPages - 1 && <AiOutlineArrowRight onClick={nextPage} />}
     </nav>
   );
 };
