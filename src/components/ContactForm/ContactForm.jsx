@@ -1,5 +1,6 @@
 //modules
 import { useState} from "react";
+import Link from "next/link"
 import { BiError } from "react-icons/bi";
 import {IoMdThumbsUp} from "react-icons/io"
 
@@ -47,7 +48,11 @@ export default function ContactForm() {
 			<h2>Contact us</h2>
 			<div className={styles.wrapper}>
 				{submitStatus === statusValues.submitted ?
-				<div className={styles.submitted}><IoMdThumbsUp className={styles.submittedIcon}/> Thank you, your form has been submitted. We will be in contact with you soon at <span className={styles.submittedEmail}>{`${ email.value}`}</span> </div> : 
+				<div className={styles.submitted}><IoMdThumbsUp className={styles.submittedIcon}/> Thank you, your form has been submitted. We will be in contact with you soon at: <span className={styles.submittedEmail}>{`${ email.value}`}</span> 
+					<Link href="/" >
+						<a className={styles.link}>Back to Homepage</a>
+					</Link>
+				</div> : 
 				<form onSubmit={handleSubmit}>
 				<label htmlFor='name'>
 					Name*:

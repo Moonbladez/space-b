@@ -1,9 +1,15 @@
 @import "./../../styles/variables";
+@import "../../styles/media.scss";
 
 .contactForm {
     .wrapper {
         margin-top: 3rem;
         grid-column: span 12;
+
+      @include xl {
+          width: 40vw;
+          margin: auto;
+      }
     }
     form {
         padding: 1rem 2rem;
@@ -29,6 +35,25 @@
             font-weight: bold;
             color: $primary;
             font-size: 2.1rem;
+        }
+
+        .link { 
+            border: 1px solid $white;
+            display: block;
+            padding: 1rem 2rem;
+            text-transform: capitalize;
+            width: 70%;
+            margin: auto;
+            margin-top: 3rem;
+
+        
+            &:hover, 
+            &:focus {
+                background-color: $primary;
+                color: $black;
+                border:  1px solid $primary;
+                transition: $transition;
+            }
         }
     }
 
