@@ -21,6 +21,7 @@ export default function Images(props) {
     <div>
       <Head>
         <title>Space B | History</title>
+        <meta charset="utf-8" />
         <html lang="en" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Space B" key="ogtitle" />

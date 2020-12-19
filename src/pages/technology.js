@@ -33,6 +33,7 @@ export default function Ships(props) {
     <div className={styles.container}>
       <Head>
         <title>Space B | Technology</title>
+        <meta charset="utf-8" />
         <html lang="en" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Space B" key="ogtitle" />

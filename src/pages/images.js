@@ -42,6 +42,7 @@ export default function Images({ apodData, roverData }) {
     <div>
       <Head>
         <title>Space B | Images</title>
+        <meta charset="utf-8" />
         <html lang="en" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Space B" key="ogtitle" />

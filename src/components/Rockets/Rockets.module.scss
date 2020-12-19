@@ -1,22 +1,35 @@
 @import "../../styles/media.scss";
+@import "../../styles/variables";
 
 .rockets {
-    fieldset {
-        grid-column: span 12;
-        margin-bottom: 2rem;
-        display: flex;
-        justify-content: space-around;
-        input {
-            margin-left: 1rem;
-        }
+  form {
+    grid-column: span 12;
 
-}
+    legend {
+      color: $primary;
+      margin-bottom: 1rem;
+    }
+  }
+  fieldset {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    input {
+      margin-left: 1rem;
+    }
 
-.wrapper {
+    .selection {
+      &:not(:last-of-type) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  .wrapper {
     grid-column: span 12;
 
     @include lg {
-        grid-column: span 6;
+      grid-column: span 6;
     }
-}
+  }
 }
