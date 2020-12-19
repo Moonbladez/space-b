@@ -1,25 +1,46 @@
-export const Pagination = (page, numberofPages, handleSetPage) =>  {
-	const pagesAsArray = Array.from(Array(numberofPages).keys()).map((interger) => interger)
+//modules
+import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
 
-	const previousPage = () => handleSetPage(page >= 1 ? page - 1 : page);
-	const currentPage = (page) => handleSetPage(page);
-	const nextPage = () => handleSetPage(page < numberOfPages - 1 ? page + 1 : page);
+//styles
+import styles from "./Pagination.module.scss";
 
+export const Pagination = ({ page, numberOfPages, handlePageSet }) => {
+  const pagesAsArray = Array.from(Array(numberOfPages).keys()).map(
+    (interger) => interger
+  );
+  const selectedPage = page;
 
-	return (
-		<nav>
-		<button onClick={previousPage} type="button">
-		  {'<'}
-		</button>
-		{pagesAsArray.map((page) => (
-		  <button onClick={() => currentPage(page)} type="button" key={page} data-page={page}>
-			{page + 1}
-		  </button>
-		))}
-		<button onClick={nextPage} type="button">
-		  {'>'}
-		</button>
-	  </nav>
-	)
-	
-}
+  console.log("number", numberOfPages);
+  console.log("page", page);
+  const previousPage = () => handlePageSet(page >= 1 ? page - 1 : page);
+  const currentPage = (page) => handlePageSet(page);
+  const nextPage = () =>
+    handlePageSet(page < numberOfPages - 1 ? page + 1 : page);
+
+  return (
+    <nav className={styles.pagination}>
+      {page !== 0 && (
+        <button onClick={previousPage} type="button">
+          <AiOutlineArrowLeft aria-aria-controls="pagination left" />
+        </button>
+      )}
+
+      {pagesAsArray.map((page) => (
+        <button
+          onClick={() => currentPage(page)}
+          type="button"
+          key={page}
+          data-page={page}
+          className={selectedPage === page ? styles.selected : ""}
+        >
+          {page + 1}
+        </button>
+      ))}
+      {page < numberOfPages - 1 && (
+        <button onClick={nextPage} type="button">
+          <AiOutlineArrowRight aria-aria-controls="pagination right" />
+        </button>
+      )}
+    </nav>
+  );
+};

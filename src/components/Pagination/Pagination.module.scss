@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+.pagination {
+  grid-column: span 12;
+  height: 1rem;
+  font-size: 1.2rem;
+
+  button {
+    padding: 1rem;
+  }
+
+  .selected {
+    color: $primary;
+  }
+
+  svg {
+    font-size: 1.5rem;
+  }
+}

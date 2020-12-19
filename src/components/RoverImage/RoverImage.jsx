@@ -3,39 +3,24 @@ import { useState } from "react";
 
 //components
 import RoverImageCard from "../RoverImageCard/RoverImageCard";
-import {Pagination} from "../Pagination/Pagination";
+import { Pagination } from "../Pagination/Pagination";
 
 //styles
 import styles from "./RoverImage.module.scss";
 
-export default function RoverImage({ roverData, photos, range }) {
+export default function RoverImage({ photos, range }) {
+  const [page, setPage] = useState(0);
+  const numberOfPages = Math.floor(photos.length / range);
+  console.log(numberOfPages);
 
-	const sortImages = (roverData) => {
-			return roverData.map((data)=> {
-				return {
-					id: data.id,
-					name: data.camera.full_name,
-					src: data.img_src
-				}
-		})
-	}
+  const getPageSlice = (page) => {
+    const offset = page * range;
+    return photos.slice(offset, offset + range);
+  };
 
-	console.log(sortImages(data.id))
-
-	// const rover = roverData.photos[0].rover;
-	// const [page, setPage] = useState(0)
-	// const numberOfPages = Math.floor(photos.length / range)
-
-	// const getPageSlice = (page) => {
-	// 	const offset = page * range
-	// 	return photos.slice(offset, offset + range)
-	// }
-
-
-	return (
-
-		<section className={styles.roverImage}>
-			{/* <h2>Images from Rover</h2>
+  return (
+    <section className={styles.roverImage}>
+      {/* <h2>Images from Rover</h2>
 			<h3>{`About ${rover.name}`}</h3>
 
 			<div className={styles.about}>
@@ -63,7 +48,21 @@ export default function RoverImage({ roverData, photos, range }) {
 					</>
 				);
 			})}
-			<Pagination page={page} numberOfPages={numberOfPages} handlePageSet={setPage}/> */}
-		</section>
-	);
+			*/}
+
+      {getPageSlice(page).map(({ id, date, name, src }) => (
+        <RoverImageCard
+          image={src}
+          key={id}
+          earthDate={date}
+          cameraName={name}
+        />
+      ))}
+      <Pagination
+        page={page}
+        numberOfPages={numberOfPages}
+        handlePageSet={setPage}
+      />
+    </section>
+  );
 }
