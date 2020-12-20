@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap");
 @import "./../../node_modules/destyle.css/destyle.css";
-
 
 @import "./variables";
 @import "./media.scss";
@@ -11,7 +10,8 @@ body {
   font-family: $font-body;
 }
 
-h1,h2 {
+h1,
+h2 {
   font-family: $font-heading;
   text-transform: capitalize;
   text-align: center;
@@ -28,9 +28,9 @@ h2 {
   grid-column: span 12;
   &:after {
     position: absolute;
-    content: '';
+    content: "";
     height: 3px;
-    bottom: -1rem; 
+    bottom: -1rem;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -56,7 +56,6 @@ h3 {
     left: 0;
     border-bottom: 1px solid $white;
   }
-
 }
 
 section {
@@ -64,8 +63,7 @@ section {
   margin: auto;
   margin-bottom: 10rem;
   display: grid;
-  grid-template-columns: repeat(12,1fr);
-  
+  grid-template-columns: repeat(12, 1fr);
 
   @include sm {
     width: 80%;
@@ -79,9 +77,15 @@ section {
   @include xl {
     grid-column-gap: 3rem;
   }
-
-
 }
 
-
-
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

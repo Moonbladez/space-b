@@ -37,6 +37,7 @@ export default function Home(props) {
       <Head>
         <title>Space B | Home</title>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
           content="Space B site provides information and news about the latest space technologies. Including, satellities, and images."

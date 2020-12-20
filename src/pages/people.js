@@ -30,6 +30,7 @@ export default function People({ peopleData, crewData }) {
       <Head>
         <title>Space B | Technology</title>
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <html lang="en" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Space B" key="ogtitle" />
