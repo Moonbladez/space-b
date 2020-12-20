@@ -20,6 +20,10 @@
   padding: 1rem 2rem;
   text-transform: uppercase;
 
+  @include md {
+    width: 30%;
+  }
+
   &:hover,
   &:focus {
     background-color: $primary;
