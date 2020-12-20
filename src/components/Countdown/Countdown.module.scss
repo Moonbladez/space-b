@@ -1,41 +1,56 @@
 @import "./../../styles/variables";
 @import "./../../styles/media.scss";
 
-
 .timer {
-    font-size: 3rem;
-    text-align: center;
-    font-family: $font-heading;
-    color: $primary;
-    margin-bottom: 2rem;
-    grid-column: span 12;
+  font-size: 3rem;
+  text-align: center;
+  font-family: $font-heading;
+  color: $primary;
+  margin-bottom: 2rem;
+  grid-column: span 12;
+}
 
+.button {
+  margin: auto;
+  margin-top: 1rem;
+  grid-column: span 12;
+  width: 50%;
+  border: 1px solid $white;
+  display: block;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $primary;
+    color: $black;
+    border: 1px solid $primary;
+    transition: $transition;
+  }
 }
 
 .info {
-    grid-column: span 12;
-    
-    @include lg {
-        grid-column: span 6;
-    }
+  grid-column: span 12;
 
+  @include lg {
+    grid-column: span 6;
+  }
 }
 
 .image {
-    text-align: center;
-    margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 
-    @include lg {
-        margin-bottom: 0;    
-}
-    
+  @include lg {
+    margin-bottom: 0;
+  }
 }
 
 .details {
-    line-height: $p-line-height;
-    grid-column: span 12;
+  line-height: $p-line-height;
+  grid-column: span 12;
 
-    @include lg {
-        grid-column: span 6;
-    }
+  @include lg {
+    grid-column: span 6;
+  }
 }
