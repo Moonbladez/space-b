@@ -12,7 +12,6 @@ export default function Countdown(props) {
     return date.toDateString();
   };
 
-  console.log(props);
   return (
     <section className={styles.countdown}>
       <h2>Next Launch: {props.data.name}</h2>
